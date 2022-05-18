@@ -19,7 +19,6 @@ function App() {
         <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
         <Routes darkTheme={darkTheme} />
         <Footer />
-        <h1>React</h1>
       </div>
     </div>
   );
