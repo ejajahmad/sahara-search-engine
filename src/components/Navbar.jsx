@@ -16,7 +16,7 @@ export const Navbar = ({ darkTheme, setDarkTheme }) => {
         <Search />
 
         <button
-          className=" bg-gray-900  text-gray-200 dark:bg-gray-100  dark:text-gray-800 p-2 rounded drop-shadow-md"
+          className=" bg-gray-900  text-gray-200 dark:bg-gray-100  dark:text-gray-800 px-2 py-[5px] rounded drop-shadow-md"
           onClick={() => setDarkTheme(!darkTheme)}
         >
           {darkTheme ? (
