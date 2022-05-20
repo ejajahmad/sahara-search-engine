@@ -33,6 +33,29 @@ export default function ResultContextProvider({ children }) {
     console.log(data);
   };
 
+  const getBookResults = async () => {
+    if (!searchQuery) return;
+    try {
+      const resultTimer = setTimeout(() => {
+        setResultTime(resultTime + 1);
+      }, 1000);
+      setIsLoading(true);
+      const response = await fetch(
+        `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&maxResults=40&key=AIzaSyDTHgIbhrTB4tYckLmCxje6UVD92CEYy7M`
+      );
+      const data = await response.json();
+
+      if (data.error) throw new Error(data.error.message);
+
+      clearTimeout(resultTimer);
+      setResults(data);
+      setIsLoading(false);
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <ResultContext.Provider
       value={{
@@ -44,6 +67,7 @@ export default function ResultContextProvider({ children }) {
         resultTime,
         setResultCount,
         getResults,
+        getBookResults,
         setSearchQuery,
         setChangeResult,
       }}

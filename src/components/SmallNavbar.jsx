@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { BiSearch } from "react-icons/bi";
 import { BiImageAlt } from "react-icons/bi";
 import { IoMdVideocam } from "react-icons/io";
+import { ImBooks } from "react-icons/im";
 import { BsNewspaper } from "react-icons/bs";
 
 const links = [
@@ -21,6 +22,11 @@ const links = [
     name: "Videos",
     path: "/video",
     icon: <IoMdVideocam className=" text-gray-900 dark:text-gray-100" />,
+  },
+  {
+    name: "Books",
+    path: "/books",
+    icon: <ImBooks className=" text-gray-900 dark:text-gray-100" />,
   },
   {
     name: "News",

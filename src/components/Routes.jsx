@@ -11,6 +11,7 @@ export const Routes = () => {
         <Route path="/image" element={<Results />} />
         <Route path="/news" element={<Results />} />
         <Route path="/video" element={<Results />} />
+        <Route path="/books" element={<Results />} />
       </RouteContainer>
     </div>
   );
