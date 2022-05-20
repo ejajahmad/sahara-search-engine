@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 
 import { useLocation } from "react-router-dom";
-import ReactPlayer from "react-player";
 
 import { useResultContext } from "../context/ResultContextProvider";
 import { Loading } from "./Loading";
@@ -21,6 +20,7 @@ export const Results = () => {
     } else {
       getResults(location.pathname.slice(1));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [changeResult, location]);
 
   if (isLoading) return <Loading />;

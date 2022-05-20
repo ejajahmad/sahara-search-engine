@@ -41,7 +41,7 @@ export default function ResultContextProvider({ children }) {
       }, 1000);
       setIsLoading(true);
       const response = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&maxResults=40&key=AIzaSyDTHgIbhrTB4tYckLmCxje6UVD92CEYy7M`
+        `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&maxResults=40&key=${process.env.REACT_APP_GOOGLE_BOOKS_API_KEY}`
       );
       const data = await response.json();
 
