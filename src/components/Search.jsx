@@ -1,11 +1,10 @@
-import React, { useRef, createRef } from "react";
+import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 
 import { useResultContext } from "../context/ResultContextProvider";
 
 export const Search = () => {
   const { setSearchQuery, changeResult, setChangeResult } = useResultContext();
-  const searchInputRef = useRef(null);
   return (
     <div className="flex items-center justify-center w-8/12">
       <div className=" flex flex-row flex-wrap items-stretch w-full   -">
